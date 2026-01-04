@@ -489,22 +489,44 @@ export default function HomePage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 md:py-32 px-4 md:px-6 bg-[var(--accent-color)] text-black text-center relative overflow-hidden">
-          <div className="relative z-10 max-w-4xl mx-auto space-y-8 md:space-y-10">
-            <h2 className="text-5xl md:text-8xl font-bold tracking-tighter leading-none">
-              FEWER. BETTER.
-            </h2>
-            <p className="text-xl md:text-2xl font-medium max-w-2xl mx-auto opacity-90">
-              We don&apos;t blast you with 50 resumes. We send 3-5 engineers we&apos;d hire ourselves.
-            </p>
-            <div className="flex justify-center pt-4">
-              <Link href="/companies" className="bg-black text-white px-12 py-5 text-xl font-bold hover:scale-105 transition-transform shadow-xl rounded-lg inline-block">
-                Work With Us
-              </Link>
+        <section className="py-24 md:py-40 px-4 md:px-6 bg-black text-white relative overflow-hidden">
+          {/* Animated gradient orbs */}
+          <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-[var(--accent-color)] rounded-full blur-[150px] opacity-30 animate-pulse"></div>
+          <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-[var(--accent-color)] rounded-full blur-[120px] opacity-20 animate-pulse" style={{ animationDelay: '1s' }}></div>
+
+          <div className="relative z-10 max-w-6xl mx-auto">
+            {/* Main content grid */}
+            <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+              {/* Left: Typography */}
+              <div className="text-center md:text-left">
+                <div className="inline-block mb-6 px-4 py-2 border border-neutral-700 rounded-full">
+                  <span className="text-sm font-bold tracking-widest text-neutral-400 uppercase">Our Promise</span>
+                </div>
+                <h2 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-[0.85] mb-8">
+                  <span className="block text-white">FEWER.</span>
+                  <span className="block text-[var(--accent-color)]">BETTER.</span>
+                </h2>
+                <p className="text-xl md:text-2xl text-neutral-400 max-w-xl leading-relaxed font-medium">
+                  Other agencies flood your inbox with 50 resumes and hope something sticks.
+                </p>
+              </div>
+
+              {/* Right: CTA */}
+              <div className="flex flex-col items-center md:items-start gap-6">
+                <Link
+                  href="/companies"
+                  className="group flex items-center gap-4 bg-[var(--accent-color)] text-black px-10 py-6 text-xl font-bold hover:bg-white transition-colors rounded-xl"
+                >
+                  <span>Talk to Us</span>
+                  <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
+                </Link>
+
+                <p className="text-neutral-500 text-sm">
+                  15 minutes. No pitch deck required.
+                </p>
+              </div>
             </div>
           </div>
-
-          <div className="absolute inset-0 opacity-10 pointer-events-none bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyMDAlJyBoZWlnaHQ9JzIwMCUnPjxmaWx0ZXIgaWQ9J25vaXNlJz48ZmVUdXJidWxlbmNlIHR5cGU9J2ZyYWN0YWxOb2lzZScgYmFzZUZyZXF1ZW5jeT0nMC42NS4gbnVtT2N0YXZlcz0nMScgc3RpdGNoVGlsZXM9J3N0aXRjaCcvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnIGZpbHRlcj0ndXJsKCNub2lzZSknIG9wYWNpdHk9JzAuNScvPjwvc3ZnPg==')]"></div>
         </section>
       </main>
 
