@@ -9,15 +9,37 @@ import DitherCanvas from '@/components/DitherCanvas';
 export default function CompaniesPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
+  const [formData, setFormData] = useState({
+    companyName: '',
+    contactName: '',
+    email: '',
+    hiringNeeds: '',
+  });
   const accentColor = '#9D62EA';
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
+    setError('');
+
+    try {
+      const response = await fetch('/api/contact/companies', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit form');
+      }
+
       setSubmitted(true);
-    }, 1500);
+    } catch {
+      setError('Something went wrong. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -89,6 +111,12 @@ export default function CompaniesPage() {
 
               <div className="bg-white border border-neutral-200 p-8 md:p-10 rounded-2xl shadow-xl">
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {error && (
+                    <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
+                      {error}
+                    </div>
+                  )}
+
                   <div className="space-y-2">
                     <label className="text-sm font-bold uppercase tracking-wider text-neutral-500">Company Name</label>
                     <div className="relative">
@@ -96,6 +124,8 @@ export default function CompaniesPage() {
                       <input
                         type="text"
                         required
+                        value={formData.companyName}
+                        onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
                         className="w-full bg-neutral-50 border border-neutral-200 p-4 pl-12 rounded-lg focus:border-[var(--accent-color)] focus:ring-1 focus:ring-[var(--accent-color)] outline-none font-medium transition-all"
                         placeholder="Acme Inc."
                       />
@@ -110,6 +140,8 @@ export default function CompaniesPage() {
                         <input
                           type="text"
                           required
+                          value={formData.contactName}
+                          onChange={(e) => setFormData({ ...formData, contactName: e.target.value })}
                           className="w-full bg-neutral-50 border border-neutral-200 p-4 pl-12 rounded-lg focus:border-[var(--accent-color)] focus:ring-1 focus:ring-[var(--accent-color)] outline-none font-medium transition-all"
                           placeholder="Jane Doe"
                         />
@@ -122,6 +154,8 @@ export default function CompaniesPage() {
                         <input
                           type="email"
                           required
+                          value={formData.email}
+                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                           className="w-full bg-neutral-50 border border-neutral-200 p-4 pl-12 rounded-lg focus:border-[var(--accent-color)] focus:ring-1 focus:ring-[var(--accent-color)] outline-none font-medium transition-all"
                           placeholder="jane@acme.com"
                         />
@@ -133,6 +167,8 @@ export default function CompaniesPage() {
                     <label className="text-sm font-bold uppercase tracking-wider text-neutral-500">Hiring Needs</label>
                     <textarea
                       required
+                      value={formData.hiringNeeds}
+                      onChange={(e) => setFormData({ ...formData, hiringNeeds: e.target.value })}
                       className="w-full bg-neutral-50 border border-neutral-200 p-4 rounded-lg focus:border-[var(--accent-color)] focus:ring-1 focus:ring-[var(--accent-color)] outline-none font-medium transition-all min-h-[150px]"
                       placeholder="We are looking for a Senior React Engineer with Python experience..."
                     ></textarea>

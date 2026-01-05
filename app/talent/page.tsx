@@ -9,15 +9,39 @@ import DitherCanvas from '@/components/DitherCanvas';
 export default function TalentPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    linkedinUrl: '',
+    primaryTech: 'JavaScript / TypeScript',
+    yoe: '3-5 Years',
+    location: '',
+  });
   const accentColor = '#9D62EA';
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
+    setError('');
+
+    try {
+      const response = await fetch('/api/contact/talent', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit form');
+      }
+
       setSubmitted(true);
-    }, 1500);
+    } catch {
+      setError('Something went wrong. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -83,11 +107,19 @@ export default function TalentPage() {
 
               <div className="bg-white border border-neutral-200 p-8 md:p-10 rounded-2xl shadow-xl">
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {error && (
+                    <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
+                      {error}
+                    </div>
+                  )}
+
                   <div className="space-y-2">
                     <label className="text-sm font-bold uppercase tracking-wider text-neutral-500">Full Name</label>
                     <input
                       type="text"
                       required
+                      value={formData.fullName}
+                      onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                       className="w-full bg-neutral-50 border border-neutral-200 p-4 rounded-lg focus:border-[var(--accent-color)] focus:ring-1 focus:ring-[var(--accent-color)] outline-none font-medium transition-all"
                       placeholder="Mateus Silva"
                     />
@@ -98,6 +130,8 @@ export default function TalentPage() {
                     <input
                       type="email"
                       required
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="w-full bg-neutral-50 border border-neutral-200 p-4 rounded-lg focus:border-[var(--accent-color)] focus:ring-1 focus:ring-[var(--accent-color)] outline-none font-medium transition-all"
                       placeholder="mateus@example.com"
                     />
@@ -110,6 +144,8 @@ export default function TalentPage() {
                       <input
                         type="url"
                         required
+                        value={formData.linkedinUrl}
+                        onChange={(e) => setFormData({ ...formData, linkedinUrl: e.target.value })}
                         className="w-full bg-neutral-50 border border-neutral-200 p-4 pl-12 rounded-lg focus:border-[var(--accent-color)] focus:ring-1 focus:ring-[var(--accent-color)] outline-none font-medium transition-all"
                         placeholder="linkedin.com/in/..."
                       />
@@ -121,7 +157,11 @@ export default function TalentPage() {
                       <label className="text-sm font-bold uppercase tracking-wider text-neutral-500">Primary Tech</label>
                       <div className="relative">
                           <Code2 className="absolute top-4 left-4 w-5 h-5 text-neutral-400" />
-                          <select className="w-full bg-neutral-50 border border-neutral-200 p-4 pl-12 rounded-lg focus:border-[var(--accent-color)] focus:ring-1 focus:ring-[var(--accent-color)] outline-none font-medium transition-all appearance-none">
+                          <select
+                            value={formData.primaryTech}
+                            onChange={(e) => setFormData({ ...formData, primaryTech: e.target.value })}
+                            className="w-full bg-neutral-50 border border-neutral-200 p-4 pl-12 rounded-lg focus:border-[var(--accent-color)] focus:ring-1 focus:ring-[var(--accent-color)] outline-none font-medium transition-all appearance-none"
+                          >
                               <option>JavaScript / TypeScript</option>
                               <option>Python</option>
                               <option>Go</option>
@@ -136,7 +176,11 @@ export default function TalentPage() {
                       <label className="text-sm font-bold uppercase tracking-wider text-neutral-500">YOE</label>
                       <div className="relative">
                           <Clock className="absolute top-4 left-4 w-5 h-5 text-neutral-400" />
-                          <select className="w-full bg-neutral-50 border border-neutral-200 p-4 pl-12 rounded-lg focus:border-[var(--accent-color)] focus:ring-1 focus:ring-[var(--accent-color)] outline-none font-medium transition-all appearance-none">
+                          <select
+                            value={formData.yoe}
+                            onChange={(e) => setFormData({ ...formData, yoe: e.target.value })}
+                            className="w-full bg-neutral-50 border border-neutral-200 p-4 pl-12 rounded-lg focus:border-[var(--accent-color)] focus:ring-1 focus:ring-[var(--accent-color)] outline-none font-medium transition-all appearance-none"
+                          >
                               <option>3-5 Years</option>
                               <option>5-8 Years</option>
                               <option>8-10 Years</option>
@@ -153,6 +197,8 @@ export default function TalentPage() {
                         <input
                           type="text"
                           required
+                          value={formData.location}
+                          onChange={(e) => setFormData({ ...formData, location: e.target.value })}
                           className="w-full bg-neutral-50 border border-neutral-200 p-4 pl-12 rounded-lg focus:border-[var(--accent-color)] focus:ring-1 focus:ring-[var(--accent-color)] outline-none font-medium transition-all"
                           placeholder="São Paulo, Brazil"
                         />

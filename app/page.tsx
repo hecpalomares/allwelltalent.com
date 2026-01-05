@@ -245,8 +245,8 @@ export default function HomePage() {
                 </div>
               </h1>
               <p className="text-xl md:text-3xl text-neutral-600 max-w-3xl leading-snug mb-10 md:mb-14 font-medium">
-                We know the best engineers in Latin America. <br className="hidden md:block"/>
-                <span className="text-black font-semibold">Your timezone. Your team. None of the hiring pain.</span>
+                We source senior engineers across Latin America. <br className="hidden md:block"/>
+                <span className="text-black font-semibold">Your timezone. Your standards. We do the vetting.</span>
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-start">
@@ -393,7 +393,7 @@ export default function HomePage() {
             <div className="relative mt-8 md:mt-0">
                 <div className="bg-white border border-neutral-200 p-8 md:p-16 rounded-3xl relative group hover:border-[var(--accent-color)] hover:shadow-2xl transition-all duration-500 shadow-lg">
                   <div className="absolute -top-5 -right-5 bg-[var(--accent-color)] text-black font-bold px-6 py-2 text-lg transform rotate-3 shadow-md border border-black/5">
-                      FLAT FEE
+                      PAY ON HIRE
                   </div>
                   <div className="text-center">
                       <div className="flex items-baseline justify-center gap-2">
@@ -404,14 +404,10 @@ export default function HomePage() {
 
                       <div className="my-12 w-full h-px bg-neutral-100"></div>
 
-                      <div className="grid grid-cols-2 gap-8 text-left">
+                      <div className="text-left">
                           <div>
                               <span className="block text-sm text-neutral-400 uppercase tracking-wider font-bold mb-1">Terms</span>
                               <span className="block text-2xl font-bold text-black">Net 30</span>
-                          </div>
-                          <div>
-                              <span className="block text-sm text-neutral-400 uppercase tracking-wider font-bold mb-1">Type</span>
-                              <span className="block text-2xl font-bold text-black">Contingent</span>
                           </div>
                       </div>
                   </div>
@@ -428,7 +424,7 @@ export default function HomePage() {
                 REAL <span className="text-[var(--accent-color)]">PEOPLE</span>
               </h2>
               <p className="text-lg md:text-2xl text-neutral-600 font-medium">
-                Engineers we actually know. Not a database.
+                Engineers we've interviewed. Not a database.
               </p>
             </div>
             <div className="hidden md:flex gap-3">
