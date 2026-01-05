@@ -24,7 +24,7 @@ export async function POST(request: Request) {
     }
 
     await resend.emails.send({
-      from: 'All Well Talent <notifications@resend.dev>',
+      from: 'All Well Talent <notifications@allwelltalent.com>',
       to: 'karla@allwelltalent.com',
       subject: `New Company Inquiry: ${companyName}`,
       html: `
