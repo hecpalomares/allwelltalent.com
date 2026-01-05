@@ -14,17 +14,17 @@ const cities = [
 ];
 
 const heroSubtitles = [
-  "YOUR HOURS.",
-  "REAL WORK.",
-  "NO MIDDLEMEN.",
-  "THEY SHIP."
+  "Your hours.",
+  "Real work.",
+  "No middlemen.",
+  "They ship."
 ];
 
 const talentProfiles = [
   {
     id: 1,
     city: "Mexico City",
-    icon: <Terminal className="w-8 h-8 text-neutral-400 group-hover:text-[var(--accent-color)] transition-colors" />,
+    icon: <Terminal className="w-8 h-8 text-neutral-400 group-hover:text-[var(--accent-color)] transition-colors duration-200" />,
     name: "Sofia M.",
     role: "Senior Full Stack",
     exp: "6 YOE",
@@ -33,7 +33,7 @@ const talentProfiles = [
   {
     id: 2,
     city: "São Paulo",
-    icon: <Server className="w-8 h-8 text-neutral-400 group-hover:text-[var(--accent-color)] transition-colors" />,
+    icon: <Server className="w-8 h-8 text-neutral-400 group-hover:text-[var(--accent-color)] transition-colors duration-200" />,
     name: "Mateus S.",
     role: "Backend Lead",
     exp: "8 YOE",
@@ -42,7 +42,7 @@ const talentProfiles = [
   {
     id: 3,
     city: "Guadalajara",
-    icon: <CodeIcon className="w-8 h-8 text-neutral-400 group-hover:text-[var(--accent-color)] transition-colors" />,
+    icon: <CodeIcon className="w-8 h-8 text-neutral-400 group-hover:text-[var(--accent-color)] transition-colors duration-200" />,
     name: "Diego R.",
     role: "Senior Backend",
     exp: "10 YOE",
@@ -51,7 +51,7 @@ const talentProfiles = [
   {
     id: 4,
     city: "Buenos Aires",
-    icon: <Database className="w-8 h-8 text-neutral-400 group-hover:text-[var(--accent-color)] transition-colors" />,
+    icon: <Database className="w-8 h-8 text-neutral-400 group-hover:text-[var(--accent-color)] transition-colors duration-200" />,
     name: "Julian G.",
     role: "Python Engineer",
     exp: "4 YOE",
@@ -60,7 +60,7 @@ const talentProfiles = [
   {
     id: 5,
     city: "Lima",
-    icon: <Layout className="w-8 h-8 text-neutral-400 group-hover:text-[var(--accent-color)] transition-colors" />,
+    icon: <Layout className="w-8 h-8 text-neutral-400 group-hover:text-[var(--accent-color)] transition-colors duration-200" />,
     name: "Elena V.",
     role: "Frontend Specialist",
     exp: "9 YOE",
@@ -69,7 +69,7 @@ const talentProfiles = [
   {
     id: 6,
     city: "Montevideo",
-    icon: <Cloud className="w-8 h-8 text-neutral-400 group-hover:text-[var(--accent-color)] transition-colors" />,
+    icon: <Cloud className="w-8 h-8 text-neutral-400 group-hover:text-[var(--accent-color)] transition-colors duration-200" />,
     name: "Lucas B.",
     role: "DevOps Engineer",
     exp: "5 YOE",
@@ -133,14 +133,14 @@ const CountUp = ({ end, label, subLabel }: { end: number, label: string, subLabe
   return (
     <div ref={ref} className="relative group cursor-default flex flex-col items-center md:items-start">
         <div className="flex items-start">
-            <span className="text-[6rem] sm:text-[8rem] md:text-[10rem] lg:text-[12rem] font-bold leading-[0.8] tracking-tighter text-neutral-900 group-hover:text-[var(--accent-color)] transition-colors duration-700 select-none">
+            <span className="text-[6rem] sm:text-[8rem] md:text-[10rem] lg:text-[12rem] font-bold leading-[0.8] tracking-tight text-neutral-900 group-hover:text-[var(--accent-color)] transition-colors duration-300 select-none">
                 {count}
             </span>
-            <span className="text-4xl md:text-6xl font-bold text-[var(--accent-color)] group-hover:text-black transition-colors duration-700 mt-4 md:mt-8">+</span>
+            <span className="text-4xl md:text-6xl font-bold text-[var(--accent-color)] group-hover:text-black transition-colors duration-300 mt-4 md:mt-8">+</span>
         </div>
-        <div className="mt-6 md:mt-8 border-t-4 border-black w-12 group-hover:w-full transition-all duration-700 ease-out"></div>
+        <div className="mt-6 md:mt-8 border-t-4 border-black w-12 group-hover:w-full transition-all duration-300 ease-out"></div>
         <div className="mt-6 text-center md:text-left">
-            <p className="text-2xl md:text-4xl font-bold text-black uppercase tracking-tighter leading-none mb-2">
+            <p className="text-2xl md:text-4xl font-bold text-black tracking-normal leading-tight mb-2">
                 {label}
             </p>
             <p className="text-lg md:text-xl text-neutral-400 font-medium">
@@ -226,8 +226,8 @@ export default function HomePage() {
         <section className="relative pt-32 pb-16 md:pt-48 md:pb-32 px-4 md:px-6">
           <div className="max-w-7xl mx-auto">
             <div className="max-w-6xl">
-              <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-[0.9] mb-8 md:mb-10">
-                SENIOR TALENT.<br />
+              <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight leading-[0.9] mb-8 md:mb-10">
+                Senior talent.<br />
                 <div className="relative h-[1.15em] overflow-hidden">
                   {heroSubtitles.map((text, index) => (
                     <span
@@ -250,10 +250,10 @@ export default function HomePage() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-start">
-                <Link href="/companies" className="group px-8 py-5 bg-black text-white font-bold text-xl hover:bg-[var(--accent-color)] hover:text-black transition-colors active:scale-95 inline-flex items-center justify-center gap-3">
-                  Hire Engineers <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                <Link href="/companies" className="group px-8 py-5 bg-black text-white font-bold text-xl hover:bg-[var(--accent-color)] hover:text-black transition-colors duration-200 active:scale-95 inline-flex items-center justify-center gap-3">
+                  Hire Engineers <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-200" />
                 </Link>
-                <Link href="/talent" className="flex items-center justify-center px-8 py-5 border-2 border-neutral-900 hover:bg-neutral-900 text-black hover:text-white font-bold text-xl transition-colors active:scale-95">
+                <Link href="/talent" className="flex items-center justify-center px-8 py-5 border-2 border-neutral-900 hover:bg-neutral-900 text-black hover:text-white font-bold text-xl transition-colors duration-200 active:scale-95">
                   I&apos;m an Engineer
                 </Link>
               </div>
@@ -269,7 +269,7 @@ export default function HomePage() {
               <div key={setIndex} className="flex items-center shrink-0">
                 {cities.map((city, i) => (
                   <React.Fragment key={`${setIndex}-${i}`}>
-                    <span className="text-3xl md:text-4xl font-bold text-neutral-300 uppercase tracking-tighter hover:text-[var(--accent-color)] transition-colors cursor-default px-8">{city}</span>
+                    <span className="text-3xl md:text-4xl font-bold text-neutral-300 tracking-normal hover:text-[var(--accent-color)] transition-colors duration-200 cursor-default px-8">{city}</span>
                     <span className="w-3 h-3 bg-[var(--accent-color)] rounded-full shrink-0"></span>
                   </React.Fragment>
                 ))}
@@ -279,9 +279,9 @@ export default function HomePage() {
         </div>
 
         {/* Experience Stats Module */}
-        <section className="py-24 md:py-48 bg-white border-b border-neutral-100">
+        <section className="py-24 md:py-32 bg-white border-b border-neutral-100">
           <div className="max-w-7xl mx-auto px-6">
-             <div className="grid grid-cols-1 md:grid-cols-2 gap-24 md:gap-12">
+             <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
                 <div className="flex justify-center md:justify-center">
                     <CountUp end={80} label="Candidates" subLabel="Placed in US Startups" />
                 </div>
@@ -293,14 +293,14 @@ export default function HomePage() {
         </section>
 
         {/* Methodology */}
-        <section id="methodology" className="py-20 md:py-32 px-4 md:px-6 bg-white">
-          <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-16 md:gap-12">
+        <section id="methodology" className="py-24 md:py-32 px-4 md:px-6 bg-white">
+          <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-16">
 
             <div className="space-y-6">
               <div className="w-20 h-20 bg-neutral-100 rounded-full flex items-center justify-center border border-neutral-200">
                 <MapPin className="w-10 h-10 text-black" />
               </div>
-              <h3 className="text-4xl font-bold tracking-tighter">We Live Here</h3>
+              <h3 className="text-4xl font-bold tracking-normal">We Live Here</h3>
               <p className="text-xl text-neutral-500 leading-relaxed font-medium">
                 Based in Mexico, hiring across LATAM. We know the engineering communities firsthand.
               </p>
@@ -310,7 +310,7 @@ export default function HomePage() {
               <div className="w-20 h-20 bg-neutral-100 rounded-full flex items-center justify-center border border-neutral-200">
                 <CheckCircle2 className="w-10 h-10 text-black" />
               </div>
-              <h3 className="text-4xl font-bold tracking-tighter">Fully Vetted</h3>
+              <h3 className="text-4xl font-bold tracking-normal">Fully Vetted</h3>
               <p className="text-xl text-neutral-500 leading-relaxed font-medium">
                 We screen for technical skills, English fluency, and culture fit. You only see candidates who match.
               </p>
@@ -320,7 +320,7 @@ export default function HomePage() {
               <div className="w-20 h-20 bg-neutral-100 rounded-full flex items-center justify-center border border-neutral-200">
                 <Zap className="w-10 h-10 text-black" />
               </div>
-              <h3 className="text-4xl font-bold tracking-tighter">Same Clock</h3>
+              <h3 className="text-4xl font-bold tracking-normal">Same Clock</h3>
               <p className="text-xl text-neutral-500 leading-relaxed font-medium">
                 EST, CST, PST — they&apos;re online when you are. No 12-hour email delays. Real standups.
               </p>
@@ -330,14 +330,14 @@ export default function HomePage() {
         </section>
 
         {/* Process */}
-        <section className="py-20 md:py-32 px-4 md:px-6 bg-neutral-50 border-y border-neutral-200">
+        <section className="py-24 md:py-32 px-4 md:px-6 bg-neutral-50 border-y border-neutral-200">
           <div className="max-w-7xl mx-auto">
-            <div className="mb-12 md:mb-24 md:w-3/4">
-              <h2 className="text-4xl md:text-7xl font-bold mb-4 md:mb-6 tracking-tighter">HOW IT <span className="text-[var(--accent-color)]">WORKS</span></h2>
-              <p className="text-lg md:text-2xl text-neutral-600">From first call to first hire. Usually under two weeks.</p>
+            <div className="mb-12 md:mb-16 max-w-2xl">
+              <h2 className="text-4xl md:text-6xl font-bold mb-4 md:mb-6 tracking-tight">How it <span className="text-[var(--accent-color)]">works</span></h2>
+              <p className="text-lg md:text-xl text-neutral-600">From first call to first hire. Usually under two weeks.</p>
             </div>
 
-            <div className="grid md:grid-cols-4 gap-8 md:gap-6 relative">
+            <div className="grid md:grid-cols-4 gap-8 relative">
               {/* Line */}
               <div className="hidden md:block absolute top-12 left-0 w-full h-px border-t border-dashed border-neutral-300 -z-10"></div>
 
@@ -347,8 +347,8 @@ export default function HomePage() {
                 { num: 3, title: "We Interview", text: "Technical deep-dive by engineers. Not recruiters reading scripts." },
                 { num: 4, title: "You Meet Them", text: "3-5 candidates who actually fit. Ready to talk this week." }
               ].map((step) => (
-                <div key={step.num} className="relative bg-white border border-neutral-200 p-8 hover:border-[var(--accent-color)] hover:shadow-xl transition-all group rounded-xl h-full">
-                  <div className="w-12 h-12 bg-neutral-50 border border-neutral-200 flex items-center justify-center text-xl font-bold mb-8 group-hover:bg-[var(--accent-color)] group-hover:text-black transition-colors rounded-full">
+                <div key={step.num} className="relative bg-white border border-neutral-200 p-8 hover:border-[var(--accent-color)] hover:shadow-lg transition-all duration-200 group rounded-xl h-full">
+                  <div className="w-12 h-12 bg-neutral-50 border border-neutral-200 flex items-center justify-center text-xl font-bold mb-8 group-hover:bg-[var(--accent-color)] group-hover:text-black transition-colors duration-200 rounded-full">
                     {step.num}
                   </div>
                   <h3 className="text-2xl font-bold mb-4 text-black">{step.title}</h3>
@@ -360,12 +360,12 @@ export default function HomePage() {
         </section>
 
         {/* Pricing */}
-        <section className="py-20 md:py-32 px-4 md:px-6 bg-white relative overflow-hidden">
+        <section className="py-24 md:py-32 px-4 md:px-6 bg-white relative overflow-hidden">
           <div className="absolute top-0 right-0 w-full md:w-2/3 h-full bg-[var(--accent-color)]/10 md:skew-x-12 md:translate-x-1/4 pointer-events-none"></div>
 
-          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-20 items-center relative z-10">
+          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
             <div>
-                <h2 className="text-5xl md:text-8xl font-bold tracking-tighter mb-6 md:mb-8 text-black leading-[0.9]">ONE <br/>NUMBER.</h2>
+                <h2 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 md:mb-8 text-black leading-tight">One number.</h2>
                 <p className="text-lg md:text-2xl text-neutral-600 mb-8 md:mb-12 font-medium">No hourly rates. No retainers. No surprises.</p>
 
                 <div className="space-y-10">
@@ -391,7 +391,7 @@ export default function HomePage() {
             </div>
 
             <div className="relative mt-8 md:mt-0">
-                <div className="bg-white border border-neutral-200 p-8 md:p-16 rounded-3xl relative group hover:border-[var(--accent-color)] hover:shadow-2xl transition-all duration-500 shadow-lg">
+                <div className="bg-white border border-neutral-200 p-8 md:p-16 rounded-3xl relative group hover:border-[var(--accent-color)] hover:shadow-xl transition-all duration-200 shadow-lg">
                   <div className="absolute -top-5 -right-5 bg-[var(--accent-color)] text-black font-bold px-6 py-2 text-lg transform rotate-3 shadow-md border border-black/5">
                       PAY ON HIRE
                   </div>
@@ -400,13 +400,13 @@ export default function HomePage() {
                         <span className="text-[8rem] md:text-[10rem] leading-none font-bold text-black tracking-tighter">15</span>
                         <span className="text-6xl font-bold text-[var(--accent-color)]">%</span>
                       </div>
-                      <p className="text-2xl text-neutral-500 font-bold mt-4 uppercase tracking-widest">of First Year Salary</p>
+                      <p className="text-xl text-neutral-500 font-medium mt-4">of first year salary</p>
 
                       <div className="my-12 w-full h-px bg-neutral-100"></div>
 
                       <div className="text-left">
                           <div>
-                              <span className="block text-sm text-neutral-400 uppercase tracking-wider font-bold mb-1">Terms</span>
+                              <span className="block text-sm text-neutral-400 font-medium mb-1">Terms</span>
                               <span className="block text-2xl font-bold text-black">Net 30</span>
                           </div>
                       </div>
@@ -417,26 +417,26 @@ export default function HomePage() {
         </section>
 
         {/* Talent Showcase */}
-        <section className="py-20 md:py-32 border-t border-neutral-200 bg-neutral-50 overflow-hidden">
+        <section className="py-24 md:py-32 border-t border-neutral-200 bg-neutral-50 overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 md:px-6 mb-12 flex flex-col md:flex-row justify-between items-end gap-8">
             <div className="space-y-4 max-w-3xl">
-              <h2 className="text-4xl md:text-7xl font-bold tracking-tighter text-black">
-                REAL <span className="text-[var(--accent-color)]">PEOPLE</span>
+              <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-black">
+                Real <span className="text-[var(--accent-color)]">people</span>
               </h2>
-              <p className="text-lg md:text-2xl text-neutral-600 font-medium">
+              <p className="text-lg md:text-xl text-neutral-600 font-medium">
                 Engineers we've interviewed. Not a database.
               </p>
             </div>
             <div className="hidden md:flex gap-3">
               <button
                 onClick={() => scroll('left')}
-                className="p-4 rounded-full border border-neutral-300 hover:bg-black hover:text-white transition-colors active:scale-90"
+                className="p-4 rounded-full border border-neutral-300 hover:bg-black hover:text-white transition-colors duration-200 active:scale-95"
               >
                 <ChevronLeft className="w-6 h-6" />
               </button>
               <button
                 onClick={() => scroll('right')}
-                className="p-4 rounded-full border border-neutral-300 hover:bg-black hover:text-white transition-colors active:scale-90"
+                className="p-4 rounded-full border border-neutral-300 hover:bg-black hover:text-white transition-colors duration-200 active:scale-95"
               >
                 <ChevronRight className="w-6 h-6" />
               </button>
@@ -454,7 +454,7 @@ export default function HomePage() {
                 key={profile.id}
                 className="min-w-[300px] md:min-w-[400px] snap-center"
               >
-                <div className="h-full p-8 md:p-10 bg-white rounded-2xl border border-neutral-200 hover:border-[var(--accent-color)] hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                <div className="h-full p-8 md:p-10 bg-white rounded-2xl border border-neutral-200 hover:border-[var(--accent-color)] hover:shadow-lg transition-all duration-200 flex flex-col justify-between">
                   <div>
                     <div className="flex justify-between items-start mb-10">
                       <div className="flex items-center gap-2 bg-neutral-50 px-3 py-1 rounded-full border border-neutral-100">
@@ -485,41 +485,31 @@ export default function HomePage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-24 md:py-40 px-4 md:px-6 bg-black text-white relative overflow-hidden">
-          {/* Animated gradient orbs */}
-          <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-[var(--accent-color)] rounded-full blur-[150px] opacity-30 animate-pulse"></div>
-          <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-[var(--accent-color)] rounded-full blur-[120px] opacity-20 animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <section className="py-24 md:py-32 px-4 md:px-6 bg-gradient-to-br from-neutral-900 via-neutral-900 to-neutral-800 text-white relative overflow-hidden border-t border-neutral-800">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-amber-900/20 via-transparent to-transparent"></div>
 
-          <div className="relative z-10 max-w-6xl mx-auto">
-            {/* Main content grid */}
-            <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
-              {/* Left: Typography */}
-              <div className="text-center md:text-left">
-                <div className="inline-block mb-6 px-4 py-2 border border-neutral-700 rounded-full">
-                  <span className="text-sm font-bold tracking-widest text-neutral-400 uppercase">Our Promise</span>
-                </div>
-                <h2 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-[0.85] mb-8">
-                  <span className="block text-white">FEWER.</span>
-                  <span className="block text-[var(--accent-color)]">BETTER.</span>
-                </h2>
-                <p className="text-xl md:text-2xl text-neutral-400 max-w-xl leading-relaxed font-medium">
-                  Other agencies flood your inbox with 50 resumes and hope something sticks.
-                </p>
-              </div>
+          <div className="relative z-10 max-w-7xl mx-auto">
+            <h2 className="text-6xl sm:text-7xl md:text-9xl font-bold tracking-tight leading-[0.9] mb-6">
+              <span className="text-white">Fewer.</span>{' '}
+              <span className="text-[var(--accent-color)]">Better.</span>
+            </h2>
 
-              {/* Right: CTA */}
-              <div className="flex flex-col items-center md:items-start gap-6">
+            <div className="w-full h-px bg-gradient-to-r from-[var(--accent-color)] via-amber-700/50 to-transparent mb-12"></div>
+
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+              <p className="text-xl md:text-2xl text-neutral-400 max-w-xl leading-relaxed">
+                Other agencies flood your inbox with 50 resumes and hope something sticks.
+              </p>
+
+              <div className="flex flex-col items-start md:items-end gap-4">
                 <Link
                   href="/companies"
-                  className="group flex items-center gap-4 bg-[var(--accent-color)] text-black px-10 py-6 text-xl font-bold hover:bg-white transition-colors rounded-xl"
+                  className="group inline-flex items-center gap-4 bg-white text-black px-8 py-4 text-lg font-bold hover:bg-[var(--accent-color)] transition-colors duration-200"
                 >
                   <span>Talk to Us</span>
-                  <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
                 </Link>
-
-                <p className="text-neutral-500 text-sm">
-                  15 minutes. No pitch deck required.
-                </p>
+                <p className="text-neutral-500 text-sm">15 minutes. No pitch deck required.</p>
               </div>
             </div>
           </div>

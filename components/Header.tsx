@@ -35,7 +35,7 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b ${
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-200 border-b ${
         isScrolled ? 'bg-white/90 backdrop-blur-md border-neutral-200 py-4' : 'bg-transparent border-transparent py-6'
       }`}
     >
@@ -55,7 +55,7 @@ const Header: React.FC = () => {
               key={item.label}
               href={item.href}
               onClick={handleNavClick}
-              className={`text-base font-bold hover:text-[var(--accent-color)] hover:scale-105 transition-all tracking-wide uppercase cursor-pointer ${
+              className={`text-base font-semibold hover:text-[var(--accent-color)] transition-colors duration-200 cursor-pointer ${
                 pathname === item.href ? 'text-[var(--accent-color)]' : 'text-neutral-600'
               }`}
             >
@@ -65,7 +65,7 @@ const Header: React.FC = () => {
           <Link
             href="/companies"
             onClick={handleNavClick}
-            className="bg-black text-white px-6 py-3 text-base font-bold hover:bg-[var(--accent-color)] hover:text-black transition-colors active:scale-95 cursor-pointer"
+            className="bg-black text-white px-6 py-3 text-base font-bold hover:bg-[var(--accent-color)] hover:text-black transition-colors duration-200 active:scale-95 cursor-pointer"
           >
             Hire Engineers
           </Link>
