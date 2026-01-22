@@ -13,12 +13,6 @@ const cities = [
   "Córdoba", "San José"
 ];
 
-const heroSubtitles = [
-  "Your hours.",
-  "Real work.",
-  "No middlemen.",
-  "They ship."
-];
 
 const talentProfiles = [
   {
@@ -154,16 +148,7 @@ const CountUp = ({ end, label, subLabel }: { end: number, label: string, subLabe
 export default function HomePage() {
   const [accentColor, setAccentColor] = useState('#9D62EA');
   const [showColorPicker, setShowColorPicker] = useState(false);
-  const [heroTextIndex, setHeroTextIndex] = useState(0);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-
-  // Rotate Hero Text
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setHeroTextIndex((prev) => (prev + 1) % heroSubtitles.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
 
 
   const scroll = (direction: 'left' | 'right') => {
@@ -223,43 +208,27 @@ export default function HomePage() {
 
       <main>
         {/* Hero Section */}
-        <section className="relative pt-32 pb-16 md:pt-48 md:pb-32 px-4 md:px-6">
+        <section className="relative pt-40 pb-24 md:pt-56 md:pb-40 px-4 md:px-6">
           <div className="max-w-7xl mx-auto">
-            <div className="max-w-6xl">
-              <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight leading-[0.9] mb-8 md:mb-10">
-                Senior talent.<br />
-                <div className="relative h-[1.15em] overflow-hidden">
-                  {heroSubtitles.map((text, index) => (
-                    <span
-                      key={text}
-                      className={`absolute top-0 left-0 transition-transform duration-700 ease-in-out block ${
-                        index === heroTextIndex
-                          ? 'translate-y-0 opacity-100'
-                          : 'translate-y-full opacity-0'
-                      }`}
-                    >
-                      <span className="relative z-10 px-1 md:px-2">{text}</span>
-                      <span className="absolute bottom-2 left-0 w-full h-1/3 bg-[var(--accent-color)] -z-0 opacity-50"></span>
-                    </span>
-                  ))}
-                </div>
+            <div className="max-w-5xl">
+              <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-[9rem] font-bold tracking-tight leading-[0.85] mb-8 md:mb-12">
+                Recruiting got automated.<br />
+                <span className="text-[var(--accent-color)]">We didn&apos;t.</span>
               </h1>
-              <p className="text-xl md:text-3xl text-neutral-600 max-w-3xl leading-snug mb-10 md:mb-14 font-medium">
-                We source senior engineers across Latin America. <br className="hidden md:block"/>
-                <span className="text-black font-semibold">Your timezone. Your standards. We do the vetting.</span>
+              <p className="text-xl md:text-2xl text-neutral-500 max-w-xl mb-12 md:mb-16">
+                Senior LATAM engineers. Vetted by humans.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-start">
-                <Link href="/companies" className="group px-8 py-5 bg-black text-white font-bold text-xl hover:bg-[var(--accent-color)] hover:text-black transition-colors duration-200 active:scale-95 inline-flex items-center justify-center gap-3">
-                  Hire Engineers <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-200" />
+                <Link href="/companies" className="group px-8 py-4 bg-black text-white font-semibold text-lg hover:bg-[var(--accent-color)] hover:text-black transition-colors duration-200 active:scale-[0.98] inline-flex items-center justify-center gap-3">
+                  Hire Engineers <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
                 </Link>
-                <Link href="/talent" className="flex items-center justify-center px-8 py-5 border-2 border-neutral-900 hover:bg-neutral-900 text-black hover:text-white font-bold text-xl transition-colors duration-200 active:scale-95">
+                <Link href="/talent" className="flex items-center justify-center px-8 py-4 text-neutral-500 hover:text-black font-semibold text-lg transition-colors duration-200">
                   I&apos;m an Engineer
                 </Link>
               </div>
             </div>
           </div>
-
         </section>
 
         {/* Marquee Section */}
@@ -300,9 +269,9 @@ export default function HomePage() {
               <div className="w-20 h-20 bg-neutral-100 rounded-full flex items-center justify-center border border-neutral-200">
                 <MapPin className="w-10 h-10 text-black" />
               </div>
-              <h3 className="text-4xl font-bold tracking-normal">We Live Here</h3>
+              <h3 className="text-4xl font-bold tracking-normal">Real Conversations</h3>
               <p className="text-xl text-neutral-500 leading-relaxed font-medium">
-                Based in Mexico, hiring across LATAM. We know the engineering communities firsthand.
+                Other agencies run your job through an AI and send you 50 &quot;matches.&quot; We pick up the phone.
               </p>
             </div>
 
@@ -310,9 +279,9 @@ export default function HomePage() {
               <div className="w-20 h-20 bg-neutral-100 rounded-full flex items-center justify-center border border-neutral-200">
                 <CheckCircle2 className="w-10 h-10 text-black" />
               </div>
-              <h3 className="text-4xl font-bold tracking-normal">Fully Vetted</h3>
+              <h3 className="text-4xl font-bold tracking-normal">Engineers Vet Engineers</h3>
               <p className="text-xl text-neutral-500 leading-relaxed font-medium">
-                We screen for technical skills, English fluency, and culture fit. You only see candidates who match.
+                Your candidates aren&apos;t screened by recruiters with scripts. They&apos;re interviewed by people who&apos;ve shipped code.
               </p>
             </div>
 
@@ -320,12 +289,45 @@ export default function HomePage() {
               <div className="w-20 h-20 bg-neutral-100 rounded-full flex items-center justify-center border border-neutral-200">
                 <Zap className="w-10 h-10 text-black" />
               </div>
-              <h3 className="text-4xl font-bold tracking-normal">Same Clock</h3>
+              <h3 className="text-4xl font-bold tracking-normal">We&apos;re in LATAM</h3>
               <p className="text-xl text-neutral-500 leading-relaxed font-medium">
-                EST, CST, PST — they&apos;re online when you are. No 12-hour email delays. Real standups.
+                Based in Mexico City. Plugged into engineering communities across Latin America. We know who&apos;s actually good.
               </p>
             </div>
 
+          </div>
+        </section>
+
+        {/* Why LATAM */}
+        <section className="py-24 md:py-32 px-4 md:px-6 bg-neutral-900 text-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="mb-16 max-w-3xl">
+              <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">Why <span className="text-[var(--accent-color)]">LATAM</span>?</h2>
+              <p className="text-xl md:text-2xl text-neutral-400 font-medium">The best-kept secret in tech hiring isn&apos;t a secret anymore.</p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="p-8 border border-neutral-800 rounded-xl hover:border-[var(--accent-color)] transition-colors duration-200">
+                <h3 className="text-2xl font-bold mb-4 text-white">Same Hours</h3>
+                <p className="text-lg text-neutral-400 leading-relaxed">
+                  Engineers in Mexico City, São Paulo, and Bogotá work when you do. Real standups. Real collaboration. No waiting 12 hours for a Slack reply.
+                </p>
+              </div>
+
+              <div className="p-8 border border-neutral-800 rounded-xl hover:border-[var(--accent-color)] transition-colors duration-200">
+                <h3 className="text-2xl font-bold mb-4 text-white">Senior Talent</h3>
+                <p className="text-lg text-neutral-400 leading-relaxed">
+                  Latin America has been producing world-class engineers for decades. Many have worked at US companies, speak fluent English, and understand American work culture.
+                </p>
+              </div>
+
+              <div className="p-8 border border-neutral-800 rounded-xl hover:border-[var(--accent-color)] transition-colors duration-200">
+                <h3 className="text-2xl font-bold mb-4 text-white">Real Savings</h3>
+                <p className="text-lg text-neutral-400 leading-relaxed">
+                  Competitive rates without compromising on quality. You&apos;re not paying Bay Area prices, but you&apos;re getting Bay Area caliber.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -424,7 +426,7 @@ export default function HomePage() {
                 Real <span className="text-[var(--accent-color)]">people</span>
               </h2>
               <p className="text-lg md:text-xl text-neutral-600 font-medium">
-                Engineers we've interviewed. Not a database.
+                No algorithm decided they were good. A person did.
               </p>
             </div>
             <div className="hidden md:flex gap-3">
@@ -490,15 +492,15 @@ export default function HomePage() {
 
           <div className="relative z-10 max-w-7xl mx-auto">
             <h2 className="text-6xl sm:text-7xl md:text-9xl font-bold tracking-tight leading-[0.9] mb-6">
-              <span className="text-white">Fewer.</span>{' '}
-              <span className="text-[var(--accent-color)]">Better.</span>
+              <span className="text-white">Hiring is a</span>{' '}
+              <span className="text-[var(--accent-color)]">human job.</span>
             </h2>
 
             <div className="w-full h-px bg-gradient-to-r from-[var(--accent-color)] via-amber-700/50 to-transparent mb-12"></div>
 
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
               <p className="text-xl md:text-2xl text-neutral-400 max-w-xl leading-relaxed">
-                Other agencies flood your inbox with 50 resumes and hope something sticks.
+                AI can parse a resume. It can&apos;t tell you who will thrive on your team.
               </p>
 
               <div className="flex flex-col items-start md:items-end gap-4">

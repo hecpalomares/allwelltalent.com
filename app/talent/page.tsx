@@ -60,7 +60,7 @@ export default function TalentPage() {
             </div>
             <h2 className="text-5xl font-bold tracking-tighter mb-4">You&apos;re In</h2>
             <p className="text-xl text-neutral-600 max-w-md">
-              We&apos;ll review your profile and reach out when we have something that fits. No spam, just real opportunities.
+              A real person will review your profile and reach out when we have something that fits. No automated emails, just real opportunities.
             </p>
             <button
               onClick={() => setSubmitted(false)}
@@ -74,13 +74,20 @@ export default function TalentPage() {
             <div className="grid md:grid-cols-2 gap-16 items-start">
               <div>
                 <h1 className="text-6xl md:text-8xl font-bold tracking-tighter mb-8 leading-[0.9]">
-                  WORK WITH <br/><span className="text-[var(--accent-color)]">US STARTUPS.</span>
+                  YOU TALK TO <br/><span className="text-[var(--accent-color)]">HUMANS.</span>
                 </h1>
                 <p className="text-xl md:text-2xl text-neutral-600 mb-12 font-medium max-w-lg">
-                  Full-time roles. USD salary. Remote. Your hours.
+                  No AI screening. No automated rejections. <span className="text-black font-semibold">A real person reviews your work.</span>
                 </p>
 
                 <div className="grid grid-cols-1 gap-6 mb-12">
+                  <div className="bg-neutral-50 p-6 rounded-xl border border-neutral-200">
+                      <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
+                          <span className="w-2 h-2 bg-[var(--accent-color)] rounded-full"></span>
+                          Your Terms
+                      </h3>
+                      <p className="text-neutral-500">Full-time roles. USD salary. Remote. Your hours.</p>
+                  </div>
                   <div className="bg-neutral-50 p-6 rounded-xl border border-neutral-200">
                       <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
                           <span className="w-2 h-2 bg-[var(--accent-color)] rounded-full"></span>
@@ -91,16 +98,16 @@ export default function TalentPage() {
                   <div className="bg-neutral-50 p-6 rounded-xl border border-neutral-200">
                       <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
                           <span className="w-2 h-2 bg-[var(--accent-color)] rounded-full"></span>
-                          Real Jobs
+                          Long-Term Roles
                       </h3>
-                      <p className="text-neutral-500">No 3-month gigs. We only work with companies looking for long-term hires.</p>
+                      <p className="text-neutral-500">No 3-month gigs. We only work with companies looking for permanent hires.</p>
                   </div>
                   <div className="bg-neutral-50 p-6 rounded-xl border border-neutral-200">
                       <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
                           <span className="w-2 h-2 bg-[var(--accent-color)] rounded-full"></span>
-                          Real Process
+                          Real Conversations
                       </h3>
-                      <p className="text-neutral-500">We vet for technical skills, English fluency, and culture match. If you pass, you&apos;re in.</p>
+                      <p className="text-neutral-500">No keyword matching. We actually read your profile and have real conversations about your experience.</p>
                   </div>
                 </div>
               </div>

@@ -72,10 +72,10 @@ export default function CompaniesPage() {
             <div className="grid md:grid-cols-2 gap-16 items-start">
               <div>
                 <h1 className="text-6xl md:text-8xl font-bold tracking-tighter mb-8 leading-[0.9]">
-                  WHO DO YOU <br/><span className="text-[var(--accent-color)]">NEED?</span>
+                  NO AI. <br/><span className="text-[var(--accent-color)]">REAL INTERVIEWS.</span>
                 </h1>
                 <p className="text-xl md:text-2xl text-neutral-600 mb-12 font-medium max-w-lg">
-                  Tell us the role. <span className="text-black font-semibold">We search, we interview, we vet.</span> You only meet candidates who are ready.
+                  Other agencies run your job through an algorithm. <span className="text-black font-semibold">We actually talk to engineers.</span> You only meet people worth your time.
                 </p>
 
                 <div className="space-y-6 hidden md:block">
@@ -84,8 +84,8 @@ export default function CompaniesPage() {
                          <span className="text-xl font-bold">01</span>
                       </div>
                       <div>
-                        <p className="text-lg font-bold">You tell us the role</p>
-                        <p className="text-neutral-500">Quick call to understand your stack, team, and culture.</p>
+                        <p className="text-lg font-bold">15-minute call</p>
+                        <p className="text-neutral-500">We learn your stack, team, and what actually matters.</p>
                       </div>
                    </div>
                    <div className="flex items-start gap-4">
@@ -93,8 +93,8 @@ export default function CompaniesPage() {
                          <span className="text-xl font-bold">02</span>
                       </div>
                       <div>
-                        <p className="text-lg font-bold">We source and interview</p>
-                        <p className="text-neutral-500">We find candidates, run technical interviews, and vet for English and culture fit.</p>
+                        <p className="text-lg font-bold">Engineers vet engineers</p>
+                        <p className="text-neutral-500">Real technical interviews by people who&apos;ve shipped code. Not recruiters with scripts.</p>
                       </div>
                    </div>
                    <div className="flex items-start gap-4">
@@ -102,8 +102,8 @@ export default function CompaniesPage() {
                          <span className="text-xl font-bold">03</span>
                       </div>
                       <div>
-                        <p className="text-lg font-bold">You meet the finalists</p>
-                        <p className="text-neutral-500">3-5 vetted candidates, ready to interview with your team.</p>
+                        <p className="text-lg font-bold">You meet who matters</p>
+                        <p className="text-neutral-500">3-5 candidates who actually fit. No resume spam.</p>
                       </div>
                    </div>
                 </div>
