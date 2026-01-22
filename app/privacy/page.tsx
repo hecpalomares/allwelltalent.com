@@ -7,7 +7,7 @@ import Footer from '@/components/Footer';
 import DitherCanvas from '@/components/DitherCanvas';
 
 export default function PrivacyPolicyPage() {
-  const accentColor = '#9D62EA';
+  const accentColor = '#ea628f';
 
   return (
     <div

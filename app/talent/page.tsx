@@ -18,7 +18,7 @@ export default function TalentPage() {
     yoe: '3-5 Years',
     location: '',
   });
-  const accentColor = '#9D62EA';
+  const accentColor = '#ea628f';
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

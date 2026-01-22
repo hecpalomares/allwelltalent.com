@@ -16,7 +16,7 @@ export default function CompaniesPage() {
     email: '',
     hiringNeeds: '',
   });
-  const accentColor = '#9D62EA';
+  const accentColor = '#ea628f';
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

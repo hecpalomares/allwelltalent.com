@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import { ArrowRight, CheckCircle2, MapPin, Clock, ChevronLeft, ChevronRight, Database, Cloud, Layout, Terminal, Server, Shield, Phone, Users } from 'lucide-react';
+import { ArrowRight, CheckCircle2, MapPin, Clock, ChevronLeft, ChevronRight, Database, Cloud, Layout, Terminal, Server, Shield, Phone, Users, X, Check } from 'lucide-react';
 import Link from 'next/link';
 import DitherCanvas from '@/components/DitherCanvas';
 import Header from '@/components/Header';
@@ -146,7 +146,7 @@ const CountUp = ({ end, label, subLabel }: { end: number, label: string, subLabe
 };
 
 export default function HomePage() {
-  const [accentColor, setAccentColor] = useState('#9D62EA');
+  const [accentColor, setAccentColor] = useState('#ea628f');
   const [showColorPicker, setShowColorPicker] = useState(false);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
@@ -182,7 +182,7 @@ export default function HomePage() {
         <div className="fixed bottom-16 right-4 md:bottom-20 md:right-6 z-50 animate-in fade-in slide-in-from-bottom-2 duration-200">
           <div className="bg-white border border-neutral-200 p-3 md:p-4 rounded-xl shadow-2xl">
             <div className="grid grid-cols-4 gap-2 md:gap-3 mb-3">
-              {['#9D62EA', '#7000ff', '#00ffd5', '#ccff00', '#ff0055', '#ffaa00', '#0066ff', '#000000'].map(color => (
+              {['#ea628f', '#9D62EA', '#7000ff', '#00ffd5', '#ccff00', '#ffaa00', '#0066ff', '#000000'].map(color => (
                 <button
                   key={color}
                   onClick={() => setAccentColor(color)}
@@ -519,30 +519,112 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-24 md:py-32 px-4 md:px-6 bg-gradient-to-br from-neutral-900 via-neutral-900 to-neutral-800 text-white relative overflow-hidden border-t border-neutral-800">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-amber-900/20 via-transparent to-transparent"></div>
-
-          <div className="relative z-10 max-w-7xl mx-auto">
-            <h2 className="text-6xl sm:text-7xl md:text-9xl font-bold tracking-tight leading-[0.9] mb-6">
-              <span className="text-white">Hiring is a</span>{' '}
-              <span className="text-[var(--accent-color)]">human job.</span>
-            </h2>
-
-            <div className="w-full h-px bg-gradient-to-r from-[var(--accent-color)] via-amber-700/50 to-transparent mb-12"></div>
-
-            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
-              <p className="text-xl md:text-2xl text-neutral-400 max-w-xl leading-relaxed">
+        {/* Comparison Section */}
+        <section className="py-24 md:py-32 px-4 md:px-6 bg-neutral-100">
+          <div className="max-w-7xl mx-auto">
+            {/* Header */}
+            <div className="text-center mb-16 md:mb-20">
+              <span className="inline-block px-4 py-2 bg-neutral-200 rounded-full text-sm font-medium text-neutral-700 mb-6">
+                Why choose us
+              </span>
+              <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
+                Hiring is a <span className="text-[var(--accent-color)]">human</span> job.
+              </h2>
+              <p className="text-lg md:text-xl text-neutral-500 max-w-2xl mx-auto">
                 AI can parse a resume. It can&apos;t tell you who will thrive on your team.
               </p>
+            </div>
 
+            {/* Comparison Cards */}
+            <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+              {/* Other Agencies Card */}
+              <div className="relative rounded-3xl overflow-hidden min-h-[380px] md:min-h-[420px]">
+                {/* Blurred Background Image */}
+                <div
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{
+                    backgroundImage: 'url(/vibe-2.webp)',
+                    filter: 'blur(5px)',
+                    transform: 'scale(1.05)',
+                  }}
+                />
+                {/* Dark Overlay */}
+                <div className="absolute inset-0 bg-black/50" />
+
+                {/* Content */}
+                <div className="relative z-10 p-8 md:p-12 h-full flex flex-col">
+                  <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-auto">
+                    Other agencies
+                  </h3>
+
+                  <div className="space-y-5 mt-auto">
+                    <div className="flex items-start gap-4">
+                      <X className="w-5 h-5 text-neutral-400 mt-1 shrink-0" />
+                      <p className="text-neutral-300 text-base md:text-lg">Keyword matching. Spray and pray.</p>
+                    </div>
+                    <div className="flex items-start gap-4">
+                      <X className="w-5 h-5 text-neutral-400 mt-1 shrink-0" />
+                      <p className="text-neutral-300 text-base md:text-lg">Non-technical recruiters reading scripts.</p>
+                    </div>
+                    <div className="flex items-start gap-4">
+                      <X className="w-5 h-5 text-neutral-400 mt-1 shrink-0" />
+                      <p className="text-neutral-300 text-base md:text-lg">Hard to fill? You get deprioritized.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* All Well Card */}
+              <div className="relative rounded-3xl overflow-hidden min-h-[380px] md:min-h-[420px]">
+                {/* Blurred Background Image */}
+                <div
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{
+                    backgroundImage: 'url(/vibe-1.webp)',
+                    filter: 'blur(5px)',
+                    transform: 'scale(1.05)',
+                  }}
+                />
+                {/* Accent Color Overlay */}
+                <div
+                  className="absolute inset-0 mix-blend-multiply"
+                  style={{ backgroundColor: accentColor, opacity: 0.7 }}
+                />
+                <div className="absolute inset-0 bg-black/20" />
+
+                {/* Content */}
+                <div className="relative z-10 p-8 md:p-12 h-full flex flex-col">
+                  <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-auto">
+                    All Well
+                  </h3>
+
+                  <div className="space-y-5 mt-auto">
+                    <div className="flex items-start gap-4">
+                      <Check className="w-5 h-5 text-white mt-1 shrink-0" />
+                      <p className="text-white text-base md:text-lg">Real conversations with every engineer.</p>
+                    </div>
+                    <div className="flex items-start gap-4">
+                      <Check className="w-5 h-5 text-white mt-1 shrink-0" />
+                      <p className="text-white text-base md:text-lg">Engineers interview engineers. Period.</p>
+                    </div>
+                    <div className="flex items-start gap-4">
+                      <Check className="w-5 h-5 text-white mt-1 shrink-0" />
+                      <p className="text-white text-base md:text-lg">Every role gets our full attention.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div className="mt-16 text-center">
               <Link
-                  href="/companies"
-                  className="group inline-flex items-center gap-4 bg-white text-black px-8 py-4 text-lg font-bold hover:bg-[var(--accent-color)] transition-colors duration-200"
-                >
-                  <span>Talk to Us</span>
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
-                </Link>
+                href="/companies"
+                className="group inline-flex items-center gap-4 bg-black text-white px-8 py-4 text-lg font-bold hover:bg-[var(--accent-color)] hover:text-black transition-colors duration-200"
+              >
+                <span>Talk to Us</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
+              </Link>
             </div>
           </div>
         </section>

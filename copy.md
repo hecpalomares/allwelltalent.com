@@ -218,10 +218,10 @@ Mexico City, São Paulo, Bogotá, Buenos Aires, Guadalajara, Medellin, Monterrey
 ## Visual Identity
 
 ### Colors
-- **Primary Accent:** #9D62EA (Purple)
+- **Primary Accent:** #ea628f (Pink)
 - **Background:** Black (#0a0a0a)
 - **Text:** White (#ffffff)
-- **Accent Options:** #7000ff, #00ffd5, #ccff00, #ff0055, #ffaa00, #0066ff, #000000
+- **Accent Options:** #9D62EA, #7000ff, #00ffd5, #ccff00, #ffaa00, #0066ff, #000000
 
 ### Typography
 - **Body:** Inter (sans-serif)
