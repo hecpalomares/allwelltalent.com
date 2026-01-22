@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import { ArrowRight, Zap, CheckCircle2, MapPin, Clock, ChevronLeft, ChevronRight, Database, Cloud, Layout, Terminal, Server, Shield } from 'lucide-react';
+import { ArrowRight, CheckCircle2, MapPin, Clock, ChevronLeft, ChevronRight, Database, Cloud, Layout, Terminal, Server, Shield, Phone, Users } from 'lucide-react';
 import Link from 'next/link';
 import DitherCanvas from '@/components/DitherCanvas';
 import Header from '@/components/Header';
@@ -208,8 +208,15 @@ export default function HomePage() {
 
       <main>
         {/* Hero Section */}
-        <section className="relative pt-40 pb-24 md:pt-56 md:pb-40 px-4 md:px-6">
-          <div className="max-w-7xl mx-auto">
+        <section className="relative pt-40 pb-24 md:pt-56 md:pb-40 px-4 md:px-6 overflow-hidden">
+          {/* LATAM Silhouette Background */}
+          <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[600px] h-[800px] md:w-[800px] md:h-[1000px] pointer-events-none opacity-[0.04]">
+            <svg viewBox="0 0 400 600" fill="currentColor" className="w-full h-full text-black">
+              {/* Simplified LATAM silhouette */}
+              <path d="M180 20 L220 25 L240 40 L250 60 L260 50 L280 55 L300 70 L310 90 L320 85 L340 100 L350 120 L345 140 L350 160 L340 180 L320 190 L300 185 L280 200 L270 220 L280 240 L290 260 L285 280 L270 300 L250 310 L240 330 L250 350 L260 370 L255 390 L240 410 L220 420 L200 415 L180 430 L160 450 L150 480 L160 510 L150 540 L130 560 L110 570 L90 560 L80 540 L90 520 L85 500 L70 480 L60 450 L70 420 L80 400 L75 380 L60 360 L50 340 L55 320 L70 300 L90 290 L100 270 L95 250 L80 230 L70 210 L75 190 L90 170 L110 160 L120 140 L115 120 L100 100 L90 80 L100 60 L120 50 L140 40 L160 30 Z" />
+            </svg>
+          </div>
+          <div className="max-w-7xl mx-auto relative">
             <div className="max-w-5xl">
               <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-[9rem] font-bold tracking-tight leading-[0.85] mb-8 md:mb-12">
                 Recruiting got automated.<br />
@@ -263,69 +270,95 @@ export default function HomePage() {
 
         {/* Methodology */}
         <section id="methodology" className="py-24 md:py-32 px-4 md:px-6 bg-white">
-          <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-16">
+          <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 md:gap-16">
 
-            <div className="space-y-6">
-              <div className="w-20 h-20 bg-neutral-100 rounded-full flex items-center justify-center border border-neutral-200">
-                <MapPin className="w-10 h-10 text-black" />
+            <div className="space-y-5">
+              <div className="w-16 h-16 bg-neutral-100 rounded-full flex items-center justify-center border border-neutral-200">
+                <Phone className="w-8 h-8 text-black" />
               </div>
-              <h3 className="text-4xl font-bold tracking-normal">Real Conversations</h3>
-              <p className="text-xl text-neutral-500 leading-relaxed font-medium">
-                Other agencies run your job through an AI and send you 50 &quot;matches.&quot; We pick up the phone.
+              <h3 className="text-3xl font-bold tracking-tight">We Pick Up the Phone</h3>
+              <p className="text-lg text-neutral-500 leading-relaxed">
+                No keyword matching. No AI screening. We have real conversations with every engineer.
               </p>
             </div>
 
-            <div className="space-y-6">
-              <div className="w-20 h-20 bg-neutral-100 rounded-full flex items-center justify-center border border-neutral-200">
-                <CheckCircle2 className="w-10 h-10 text-black" />
+            <div className="space-y-5">
+              <div className="w-16 h-16 bg-neutral-100 rounded-full flex items-center justify-center border border-neutral-200">
+                <Users className="w-8 h-8 text-black" />
               </div>
-              <h3 className="text-4xl font-bold tracking-normal">Engineers Vet Engineers</h3>
-              <p className="text-xl text-neutral-500 leading-relaxed font-medium">
-                Your candidates aren&apos;t screened by recruiters with scripts. They&apos;re interviewed by people who&apos;ve shipped code.
+              <h3 className="text-3xl font-bold tracking-tight">Engineers Vet Engineers</h3>
+              <p className="text-lg text-neutral-500 leading-relaxed">
+                Technical interviews by people who&apos;ve shipped code. Not recruiters reading scripts.
               </p>
             </div>
 
-            <div className="space-y-6">
-              <div className="w-20 h-20 bg-neutral-100 rounded-full flex items-center justify-center border border-neutral-200">
-                <Zap className="w-10 h-10 text-black" />
+            <div className="space-y-5">
+              <div className="w-16 h-16 bg-neutral-100 rounded-full flex items-center justify-center border border-neutral-200">
+                <MapPin className="w-8 h-8 text-black" />
               </div>
-              <h3 className="text-4xl font-bold tracking-normal">We&apos;re in LATAM</h3>
-              <p className="text-xl text-neutral-500 leading-relaxed font-medium">
-                Based in Mexico City. Plugged into engineering communities across Latin America. We know who&apos;s actually good.
+              <h3 className="text-3xl font-bold tracking-tight">Based in LATAM</h3>
+              <p className="text-lg text-neutral-500 leading-relaxed">
+                Mexico City HQ. Plugged into engineering communities across Latin America.
               </p>
             </div>
 
           </div>
         </section>
 
-        {/* Why LATAM */}
-        <section className="py-24 md:py-32 px-4 md:px-6 bg-neutral-900 text-white">
+        {/* Why LATAM - Timezone Visual */}
+        <section className="py-24 md:py-32 px-4 md:px-6 bg-gradient-to-b from-neutral-50 to-white border-y border-neutral-200 overflow-hidden">
           <div className="max-w-7xl mx-auto">
-            <div className="mb-16 max-w-3xl">
-              <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">Why <span className="text-[var(--accent-color)]">LATAM</span>?</h2>
-              <p className="text-xl md:text-2xl text-neutral-400 font-medium">The best-kept secret in tech hiring isn&apos;t a secret anymore.</p>
+            <div className="mb-16 md:mb-20">
+              <h2 className="text-4xl md:text-6xl font-bold mb-4 tracking-tight text-black">Why <span className="text-[var(--accent-color)]">LATAM</span>?</h2>
+              <p className="text-xl text-neutral-500">Same timezone. Senior talent. Real collaboration.</p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="p-8 border border-neutral-800 rounded-xl hover:border-[var(--accent-color)] transition-colors duration-200">
-                <h3 className="text-2xl font-bold mb-4 text-white">Same Hours</h3>
-                <p className="text-lg text-neutral-400 leading-relaxed">
-                  Engineers in Mexico City, São Paulo, and Bogotá work when you do. Real standups. Real collaboration. No waiting 12 hours for a Slack reply.
-                </p>
-              </div>
+            {/* Timezone Strip */}
+            <div className="mb-16">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 max-w-4xl mx-auto">
+                {/* San Francisco */}
+                <div className="text-center p-8 rounded-2xl transition-all duration-300 hover:bg-neutral-100 group">
+                  <div className="mb-4">
+                    <span className="text-6xl md:text-7xl font-bold text-neutral-800 transition-colors duration-300 group-hover:text-[var(--accent-color)]">9</span>
+                    <span className="text-xl text-neutral-400 font-medium">AM</span>
+                  </div>
+                  <p className="text-neutral-800 text-lg font-medium">San Francisco</p>
+                  <p className="text-neutral-400 text-sm mt-1">You start your day</p>
+                </div>
 
-              <div className="p-8 border border-neutral-800 rounded-xl hover:border-[var(--accent-color)] transition-colors duration-200">
-                <h3 className="text-2xl font-bold mb-4 text-white">Senior Talent</h3>
-                <p className="text-lg text-neutral-400 leading-relaxed">
-                  Latin America has been producing world-class engineers for decades. Many have worked at US companies, speak fluent English, and understand American work culture.
-                </p>
-              </div>
+                {/* Mexico City */}
+                <div className="text-center p-8 rounded-2xl transition-all duration-300 hover:bg-neutral-100 group relative">
+                  <div className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 w-px h-16 bg-neutral-200"></div>
+                  <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-px h-16 bg-neutral-200"></div>
+                  <div className="mb-4">
+                    <span className="text-6xl md:text-7xl font-bold text-neutral-800 transition-colors duration-300 group-hover:text-[var(--accent-color)]">11</span>
+                    <span className="text-xl text-neutral-400 font-medium">AM</span>
+                  </div>
+                  <p className="text-neutral-800 text-lg font-medium">Mexico City</p>
+                  <p className="text-neutral-400 text-sm mt-1">Already in flow</p>
+                </div>
 
-              <div className="p-8 border border-neutral-800 rounded-xl hover:border-[var(--accent-color)] transition-colors duration-200">
-                <h3 className="text-2xl font-bold mb-4 text-white">Real Savings</h3>
-                <p className="text-lg text-neutral-400 leading-relaxed">
-                  Competitive rates without compromising on quality. You&apos;re not paying Bay Area prices, but you&apos;re getting Bay Area caliber.
-                </p>
+                {/* São Paulo */}
+                <div className="text-center p-8 rounded-2xl transition-all duration-300 hover:bg-neutral-100 group">
+                  <div className="mb-4">
+                    <span className="text-6xl md:text-7xl font-bold text-neutral-800 transition-colors duration-300 group-hover:text-[var(--accent-color)]">1</span>
+                    <span className="text-xl text-neutral-400 font-medium">PM</span>
+                  </div>
+                  <p className="text-neutral-800 text-lg font-medium">São Paulo</p>
+                  <p className="text-neutral-400 text-sm mt-1">Peak productivity</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Supporting points */}
+            <div className="grid md:grid-cols-2 gap-4 max-w-3xl mx-auto">
+              <div className="flex items-center gap-3 px-5 py-4 rounded-full bg-neutral-100/80 border border-neutral-200/50 transition-all duration-300 hover:border-[var(--accent-color)]/30 hover:bg-neutral-100">
+                <div className="w-2 h-2 bg-[var(--accent-color)] rounded-full shrink-0"></div>
+                <p className="text-neutral-700 font-medium">Real standups. Real collaboration.</p>
+              </div>
+              <div className="flex items-center gap-3 px-5 py-4 rounded-full bg-neutral-100/80 border border-neutral-200/50 transition-all duration-300 hover:border-[var(--accent-color)]/30 hover:bg-neutral-100">
+                <div className="w-2 h-2 bg-[var(--accent-color)] rounded-full shrink-0"></div>
+                <p className="text-neutral-700 font-medium">Bay Area caliber. Better value.</p>
               </div>
             </div>
           </div>
@@ -503,16 +536,13 @@ export default function HomePage() {
                 AI can parse a resume. It can&apos;t tell you who will thrive on your team.
               </p>
 
-              <div className="flex flex-col items-start md:items-end gap-4">
-                <Link
+              <Link
                   href="/companies"
                   className="group inline-flex items-center gap-4 bg-white text-black px-8 py-4 text-lg font-bold hover:bg-[var(--accent-color)] transition-colors duration-200"
                 >
                   <span>Talk to Us</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
                 </Link>
-                <p className="text-neutral-500 text-sm">15 minutes. No pitch deck required.</p>
-              </div>
             </div>
           </div>
         </section>
