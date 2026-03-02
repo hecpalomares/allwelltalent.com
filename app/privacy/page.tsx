@@ -1,13 +1,18 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Shield, Lock, EyeOff } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import DitherCanvas from '@/components/DitherCanvas';
 
 export default function PrivacyPolicyPage() {
-  const accentColor = '#ea628f';
+  const [accentColor, setAccentColor] = useState('#ea628f');
+
+  useEffect(() => {
+    const saved = localStorage.getItem('accentColor');
+    if (saved) setAccentColor(saved);
+  }, []);
 
   return (
     <div
@@ -21,7 +26,7 @@ export default function PrivacyPolicyPage() {
         <div className="pt-32 md:pt-40 pb-20 px-6 max-w-4xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-500">
           <div className="mb-16">
             <h1 className="text-6xl md:text-8xl font-bold tracking-tighter mb-8 leading-[0.9]">
-              PRIVACY <br/><span className="text-[var(--accent-color)]">POLICY.</span>
+              Privacy<br/><span className="text-[var(--accent-color)]">Policy.</span>
             </h1>
             <p className="text-xl md:text-2xl text-neutral-600 font-medium max-w-2xl">
               We keep it simple. We are a recruitment agency, not a data broker.

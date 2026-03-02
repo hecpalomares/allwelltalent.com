@@ -150,6 +150,16 @@ export default function HomePage() {
   const [showColorPicker, setShowColorPicker] = useState(false);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
+  useEffect(() => {
+    const saved = localStorage.getItem('accentColor');
+    if (saved) setAccentColor(saved);
+  }, []);
+
+  const handleAccentColorChange = (color: string) => {
+    setAccentColor(color);
+    localStorage.setItem('accentColor', color);
+  };
+
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollContainerRef.current) {
@@ -185,7 +195,7 @@ export default function HomePage() {
               {['#ea628f', '#9D62EA', '#7000ff', '#00ffd5', '#ccff00', '#ffaa00', '#0066ff', '#000000'].map(color => (
                 <button
                   key={color}
-                  onClick={() => setAccentColor(color)}
+                  onClick={() => handleAccentColorChange(color)}
                   className={`w-8 h-8 md:w-10 md:h-10 rounded-full border-2 ${accentColor === color ? 'border-black scale-110' : 'border-neutral-200'} shadow-sm transition-all hover:scale-110`}
                   style={{ backgroundColor: color }}
                 />
@@ -195,7 +205,7 @@ export default function HomePage() {
               <input
                 type="color"
                 value={accentColor}
-                onChange={(e) => setAccentColor(e.target.value)}
+                onChange={(e) => handleAccentColorChange(e.target.value)}
                 className="absolute inset-0 w-full h-full cursor-pointer border-0"
               />
             </div>
@@ -379,7 +389,7 @@ export default function HomePage() {
               {[
                 { num: 1, title: "You Tell Us", text: "15-minute call. Who do you need? What matters most?" },
                 { num: 2, title: "We Search", text: "We tap our network. Real conversations, not keyword matching." },
-                { num: 3, title: "We Interview", text: "Technical deep-dive by engineers. Not recruiters reading scripts." },
+                { num: 3, title: "We Interview", text: "A technical deep-dive by people who've shipped code. We know what good looks like." },
                 { num: 4, title: "You Meet Them", text: "3-5 candidates who actually fit. Ready to talk this week." }
               ].map((step) => (
                 <div key={step.num} className="relative bg-white border border-neutral-200 p-8 hover:border-[var(--accent-color)] hover:shadow-lg transition-all duration-200 group rounded-xl h-full">
@@ -395,11 +405,10 @@ export default function HomePage() {
         </section>
 
         {/* Pricing */}
-        <section className="py-24 md:py-32 px-4 md:px-6 bg-white relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-full md:w-2/3 h-full bg-[var(--accent-color)]/10 md:skew-x-12 md:translate-x-1/4 pointer-events-none"></div>
-
-          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
+        <section className="py-24 md:py-32 px-4 md:px-6 bg-neutral-50 border-y border-neutral-200 relative">
+          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
             <div>
+                <span className="inline-block px-4 py-2 bg-neutral-200 rounded-full text-sm font-medium text-neutral-700 mb-6">Transparent pricing</span>
                 <h2 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 md:mb-8 text-black leading-tight">One number.</h2>
                 <p className="text-lg md:text-2xl text-neutral-600 mb-8 md:mb-12 font-medium">No hourly rates. No retainers. No surprises.</p>
 
@@ -595,7 +604,7 @@ export default function HomePage() {
                 {/* Content */}
                 <div className="relative z-10 p-8 md:p-12 h-full flex flex-col">
                   <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-auto">
-                    All Well
+                    All Well Talent
                   </h3>
 
                   <div className="space-y-5 mt-auto">

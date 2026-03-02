@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ArrowRight, CheckCircle2, Linkedin, Code2, MapPin, Clock } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -18,7 +18,12 @@ export default function TalentPage() {
     yoe: '3-5 Years',
     location: '',
   });
-  const accentColor = '#ea628f';
+  const [accentColor, setAccentColor] = useState('#ea628f');
+
+  useEffect(() => {
+    const saved = localStorage.getItem('accentColor');
+    if (saved) setAccentColor(saved);
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -66,7 +71,7 @@ export default function TalentPage() {
               onClick={() => setSubmitted(false)}
               className="mt-12 text-sm font-bold underline hover:text-[var(--accent-color)]"
             >
-              Back to Home
+              Submit another application
             </button>
           </div>
         ) : (
@@ -74,7 +79,7 @@ export default function TalentPage() {
             <div className="grid md:grid-cols-2 gap-16 items-start">
               <div>
                 <h1 className="text-6xl md:text-8xl font-bold tracking-tighter mb-8 leading-[0.9]">
-                  YOU TALK TO <br/><span className="text-[var(--accent-color)]">HUMANS.</span>
+                  You talk to<br/><span className="text-[var(--accent-color)]">a person.</span>
                 </h1>
                 <p className="text-xl md:text-2xl text-neutral-600 mb-12 font-medium max-w-lg">
                   No AI screening. No automated rejections. <span className="text-black font-semibold">A real person reviews your work.</span>

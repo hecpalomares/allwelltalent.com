@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
               <span className="font-bold text-black tracking-tight text-xl">All Well</span>
             </div>
             <p className="text-neutral-500 max-w-xs">
-              Senior engineers from Latin America. Fully vetted for skills, English, and culture fit.
+              Senior engineers from Latin America. Vetted for technical depth, English fluency, and team dynamics.
             </p>
           </div>
           <div className="flex gap-8 md:gap-12">

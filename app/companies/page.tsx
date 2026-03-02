@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ArrowRight, CheckCircle2, Building2, Mail, User } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -16,7 +16,12 @@ export default function CompaniesPage() {
     email: '',
     hiringNeeds: '',
   });
-  const accentColor = '#ea628f';
+  const [accentColor, setAccentColor] = useState('#ea628f');
+
+  useEffect(() => {
+    const saved = localStorage.getItem('accentColor');
+    if (saved) setAccentColor(saved);
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -72,7 +77,7 @@ export default function CompaniesPage() {
             <div className="grid md:grid-cols-2 gap-16 items-start">
               <div>
                 <h1 className="text-6xl md:text-8xl font-bold tracking-tighter mb-8 leading-[0.9]">
-                  NO AI. <br/><span className="text-[var(--accent-color)]">REAL INTERVIEWS.</span>
+                  No AI.<br/><span className="text-[var(--accent-color)]">Real interviews.</span>
                 </h1>
                 <p className="text-xl md:text-2xl text-neutral-600 mb-12 font-medium max-w-lg">
                   Other agencies run your job through an algorithm. <span className="text-black font-semibold">We actually talk to engineers.</span> You only meet people worth your time.
