@@ -24,8 +24,8 @@ export async function POST(request: Request) {
     }
 
     await resend.emails.send({
-      from: 'All Well Talent <notifications@allwelltalent.com>',
-      to: 'karla@allwelltalent.com',
+      from: "All's Well Talent <notifications@allswelltalent.com>",
+      to: 'karla@allswelltalent.com',
       subject: `New Company Inquiry: ${companyName}`,
       html: `
         <h2>New Company Hiring Request</h2>
@@ -35,7 +35,7 @@ export async function POST(request: Request) {
         <p><strong>Hiring Needs:</strong></p>
         <p>${hiringNeeds.replace(/\n/g, '<br>')}</p>
         <hr>
-        <p style="color: #666; font-size: 12px;">Submitted via All Well Talent website</p>
+        <p style="color: #666; font-size: 12px;">Submitted via All's Well Talent website</p>
       `,
     });
 

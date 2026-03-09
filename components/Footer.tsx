@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 
 const Footer: React.FC = () => {
   return (
@@ -9,10 +9,6 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-12">
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <div className="w-3 h-3 bg-[var(--accent-color)] rounded-full"></div>
-              <span className="font-bold text-black tracking-tight text-xl">All Well</span>
-            </div>
             <p className="text-neutral-500 max-w-xs">
               Senior engineers from Latin America. Vetted for technical depth, English fluency, and team dynamics.
             </p>
@@ -21,21 +17,29 @@ const Footer: React.FC = () => {
             <div className="space-y-3">
               <span className="text-xs font-bold uppercase tracking-wider text-neutral-400">Company</span>
               <div className="flex flex-col gap-2">
-                <Link href="/companies" className="hover:text-black transition-colors">For Companies</Link>
-                <Link href="/talent" className="hover:text-black transition-colors">For Engineers</Link>
-                <Link href="/#methodology" className="hover:text-black transition-colors">How We Work</Link>
+                <Link href="/companies" className="hover:text-black transition-colors">
+                  For Companies
+                </Link>
+                <Link href="/talent" className="hover:text-black transition-colors">
+                  For Engineers
+                </Link>
+                <Link href="/#methodology" className="hover:text-black transition-colors">
+                  How We Work
+                </Link>
               </div>
             </div>
             <div className="space-y-3">
               <span className="text-xs font-bold uppercase tracking-wider text-neutral-400">Legal</span>
               <div className="flex flex-col gap-2">
-                <Link href="/privacy" className="hover:text-black transition-colors">Privacy</Link>
+                <Link href="/privacy" className="hover:text-black transition-colors">
+                  Privacy
+                </Link>
               </div>
             </div>
           </div>
         </div>
         <div className="pt-8 border-t border-neutral-200 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-neutral-400">
-          <span>© {new Date().getFullYear()} All Well Talent · Mexico City</span>
+          <span>© {new Date().getFullYear()} All's Well Talent · Mexico City</span>
           <a
             href="https://claude.ai/code"
             target="_blank"

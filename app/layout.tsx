@@ -15,8 +15,8 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'All Well Talent | Senior LATAM Recruitment',
-  description: 'Senior LATAM engineers, vetted by humans. All Well Talent places top Latin American developers with US startups — no AI screening, no keyword matching.',
+  title: "All's Well Talent | Senior LATAM Recruitment",
+  description: "Senior LATAM engineers, vetted by humans. All's Well Talent places top Latin American developers with US startups — no AI screening, no keyword matching.",
 };
 
 export default function RootLayout({

@@ -1,8 +1,8 @@
-# All Well Talent — Brand & Copy Guide
+# All's Well Talent — Brand & Copy Guide
 
 ## Company Overview
 
-**Name:** All Well Talent
+**Name:** All's Well Talent
 **Tagline:** "Recruiting without the robots. Engineers from Latin America."
 **Location:** Mexico City
 **Description:** A human-first recruitment agency connecting senior LATAM engineers with US startups. No AI screening. No keyword matching. Just people who know engineers.
@@ -14,6 +14,7 @@
 ## Brand Voice & Tone
 
 ### Personality Traits
+
 - **Human-first** — We don't automate what matters. Hiring is a human job.
 - **Direct** — Says what it means without fluff
 - **Trustworthy** — Makes specific promises (90-day guarantee, 48-hour response)
@@ -24,6 +25,7 @@
 - **Local-rooted** — "Based in Mexico" with authentic LATAM presence
 
 ### Writing Guidelines
+
 - Short, punchy copy (e.g., "Fewer. Better.")
 - No corporate jargon — speak plainly
 - Address pain points directly
@@ -35,16 +37,19 @@
 ## Core Messaging
 
 ### Hero Copy
+
 > **Recruiting got automated. We didn't.**
 >
 > While everyone else builds AI to scan resumes, we actually talk to engineers. Real interviews. Real conversations. Real judgment. That's how you find people who ship.
 
 ### Alternate Hero
+
 > **Algorithms don't know who will thrive on your team. We do.**
 >
 > No keyword matching. No AI screening. We interview engineers ourselves — technical skills, communication, culture fit. Then we introduce you to 3-5 people worth your time.
 
 ### One-Liners (for headers/subheads)
+
 - "Everyone automated recruiting. We think that's the problem."
 - "AI can parse a resume. It can't tell you who will thrive."
 - "We still believe hiring is a human job."
@@ -52,12 +57,12 @@
 
 ### Differentiators
 
-| Phrase | Meaning |
-|--------|---------|
-| "No AI" | Human judgment over algorithmic matching |
-| "Real work" | Long-term roles, not gigs |
-| "They ship" | Engineers who deliver |
-| "No middlemen" | Direct relationships |
+| Phrase          | Meaning                                          |
+| --------------- | ------------------------------------------------ |
+| "No AI"         | Human judgment over algorithmic matching         |
+| "Real work"     | Long-term roles, not gigs                        |
+| "They ship"     | Engineers who deliver                            |
+| "No middlemen"  | Direct relationships                             |
 | "Real standups" | Timezone overlap enables real-time collaboration |
 
 ---
@@ -67,23 +72,28 @@
 ### For Companies
 
 **No AI. Real Interviews.**
+
 - "Other agencies run your job description through an algorithm and pray."
 - "We actually talk to engineers. Every single one."
 
 **Fewer. Better.**
+
 - "Other agencies flood your inbox with 50 resumes and hope something sticks."
 - "We send you 3-5 candidates. Vetted. Ready to interview."
 
 **Engineers Vet Engineers**
+
 - Technical deep-dive interviews by people who've shipped code
 - Not recruiters reading from scripts
 - We know what good looks like because we've done the work
 
 **Timezone Alignment**
+
 - "EST, CST, PST — they're online when you are."
 - "No 12-hour email delays. Real standups."
 
 **Simple Pricing**
+
 - 15% of first-year salary (pay on hire)
 - 90-day guarantee with replacement at no charge
 - Net 30 terms
@@ -92,18 +102,23 @@
 ### For Talent
 
 **You talk to humans, not forms.**
+
 - "No AI screening. No automated rejections. A real person reviews your work."
 
 **Real Pay**
+
 - "We push for what you're worth. No lowballing. Competitive with US rates."
 
 **Real Jobs**
+
 - "No 3-month gigs. We only work with companies looking for long-term hires."
 
 **Real Process**
+
 - "We vet for technical skills, English fluency, and culture match. If you pass, you're in."
 
 **Your Terms**
+
 - "Full-time roles. USD salary. Remote. Your hours."
 
 ---
@@ -137,6 +152,7 @@ Latin America has been producing world-class engineers for decades. Many have wo
 Competitive rates without compromising on quality. You're not paying Bay Area prices, but you're getting Bay Area caliber.
 
 ### Quick Facts
+
 - **Timezone overlap** — EST, CST, PST compatible. Real-time collaboration.
 - **Deep talent pool** — Senior engineers with US company experience.
 - **English fluency** — Communication isn't a barrier.
@@ -157,12 +173,14 @@ Competitive rates without compromising on quality. You're not paying Bay Area pr
 ## Call-to-Actions
 
 ### Primary
+
 - "Hire Engineers" (companies)
 - "I'm an Engineer" (talent)
 - "Start Hiring" (form submission)
 - "Apply Now" (talent form)
 
 ### Secondary
+
 - "Talk to Us"
 - "15 minutes. No pitch deck required."
 
@@ -171,10 +189,12 @@ Competitive rates without compromising on quality. You're not paying Bay Area pr
 ## Confirmation Messages
 
 ### Companies
+
 **Headline:** "Got It"
 **Body:** "We'll reach out today to set up a quick call. Usually within a few hours."
 
 ### Talent
+
 **Headline:** "You're In"
 **Body:** "We'll review your profile and reach out when we have something that fits. No spam, just real opportunities."
 
@@ -194,10 +214,12 @@ Competitive rates without compromising on quality. You're not paying Bay Area pr
 **Subheader:** "No algorithm decided they were good. A person did."
 
 ### Alternate Headers
+
 - "Engineers we've actually talked to."
 - "Every profile here passed a real interview."
 
 ### Geographic Focus
+
 Mexico City, São Paulo, Bogotá, Buenos Aires, Guadalajara, Medellin, Monterrey, Rio de Janeiro, Córdoba, San José
 
 ---
@@ -207,9 +229,10 @@ Mexico City, São Paulo, Bogotá, Buenos Aires, Guadalajara, Medellin, Monterrey
 **Opening:** "We keep it simple. We are a recruitment agency, not a data broker."
 
 **Key Promises:**
+
 - "We don't sell your data. Full stop."
 - Only collect information necessary for matching
-- Data never shared beyond All Well Talent
+- Data never shared beyond All's Well Talent
 - Request data deletion within 48 hours
 - Email: privacy@allwelltalent.com
 
@@ -218,16 +241,19 @@ Mexico City, São Paulo, Bogotá, Buenos Aires, Guadalajara, Medellin, Monterrey
 ## Visual Identity
 
 ### Colors
+
 - **Primary Accent:** #ea628f (Pink)
 - **Background:** Black (#0a0a0a)
 - **Text:** White (#ffffff)
 - **Accent Options:** #9D62EA, #7000ff, #00ffd5, #ccff00, #ffaa00, #0066ff, #000000
 
 ### Typography
+
 - **Body:** Inter (sans-serif)
 - **Headlines:** Space Grotesk (sans-serif)
 
 ### Design Elements
+
 - Color picker with "Pick your vibe"
 - Dither canvas background effect
 - Marquee animation of LATAM cities

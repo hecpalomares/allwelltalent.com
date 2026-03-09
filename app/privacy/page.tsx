@@ -44,7 +44,7 @@ export default function PrivacyPolicyPage() {
                 <h3 className="text-3xl font-bold text-black">We don&apos;t sell your data.</h3>
                 <div className="prose prose-lg text-neutral-600 leading-relaxed">
                   <p>
-                    Full stop. When you submit your profile as a candidate or your hiring requirements as a company, that information stays strictly within All Well Talent. We use it solely for the purpose of matching talent with opportunities.
+                    Full stop. When you submit your profile as a candidate or your hiring requirements as a company, that information stays strictly within All's Well Talent. We use it solely for the purpose of matching talent with opportunities.
                   </p>
                 </div>
               </div>
@@ -76,7 +76,7 @@ export default function PrivacyPolicyPage() {
                 <h3 className="text-3xl font-bold text-black">Your Rights.</h3>
                 <div className="prose prose-lg text-neutral-600 leading-relaxed">
                   <p>
-                    You can request to have your data deleted from our internal database at any time. Simply email us at <strong>privacy@allwelltalent.com</strong> and we will wipe your record within 48 hours. No questions asked.
+                    You can request to have your data deleted from our internal database at any time. Simply email us at <strong>privacy@allswelltalent.com</strong> and we will wipe your record within 48 hours. No questions asked.
                   </p>
                 </div>
               </div>

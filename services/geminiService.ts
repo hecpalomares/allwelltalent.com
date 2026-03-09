@@ -1,12 +1,12 @@
 import { GoogleGenAI } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || '' });
+const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || "" });
 
 export const refineJobDescription = async (jobDescription: string): Promise<string> => {
   try {
-    const model = 'gemini-2.5-flash';
+    const model = "gemini-2.5-flash";
     const systemInstruction = `
-      You are an elite technical recruiter for "All Well Talent", a boutique agency specializing in connecting top-tier Latin American software engineers with high-growth US startups.
+      You are an elite technical recruiter for "All's Well Talent", a boutique agency specializing in connecting top-tier Latin American software engineers with high-growth US startups.
 
       Your goal is to take a raw job description or requirement list provided by a US client and "Remix" it to attract the best LatAm talent.
 
@@ -24,7 +24,7 @@ export const refineJobDescription = async (jobDescription: string): Promise<stri
       config: {
         systemInstruction,
         temperature: 0.7,
-      }
+      },
     });
 
     return response.text || "Unable to generate refinement. Please try again.";
