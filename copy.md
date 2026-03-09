@@ -234,7 +234,7 @@ Mexico City, São Paulo, Bogotá, Buenos Aires, Guadalajara, Medellin, Monterrey
 - Only collect information necessary for matching
 - Data never shared beyond All's Well Talent
 - Request data deletion within 48 hours
-- Email: privacy@allwelltalent.com
+- Email: privacy@allswelltalent.com
 
 ---
 
